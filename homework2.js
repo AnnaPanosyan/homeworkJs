@@ -55,7 +55,9 @@ getEvenNumbers(num1,num2)
 
 // task3
 // Write a recursive function to determine whether all digits of the number are odd or not.
-
+ let num = 4211133;
+//  let num = 7791;
+//  let num = 5
 function numberOddOrNot (number){
     let odd = true;
     number = '' + number;
@@ -70,11 +72,13 @@ function numberOddOrNot (number){
     }
     return odd
 }
-
+numberOddOrNot (num)
 // task4
 // Given an array of numbers. Write a recursive function to find its minimal positive element. (if such
 // element does not exist, return -1)․
-
+// let arr = [56, -9, 87, -23, 0, -105, 55, 1];
+// let arr = [45, -9, 15, 5, -78];
+let arr = [-5, -9, -111, -1000, -7];
 
 function getMinNumber(arr, j = 0){
     let result;
@@ -84,14 +88,14 @@ function getMinNumber(arr, j = 0){
         result = arr[j+1]; 
     }
     if (arr.length === 0 ){
-        return result
+        return result;
     }
     if(result === undefined){
-        return -1
+        return -1;
     }
     for(let i = j+1; i < arr.length; i++){
         if( result > arr[i] && arr[i] >= 0 ){
-            result = arr[i]
+            result = arr[i];
         }
     }
     arr.shift()
@@ -100,6 +104,7 @@ function getMinNumber(arr, j = 0){
     }
     return  result
 }
+getMinNumber(arr)
 
 // task5
 // Given an array of numbers which is almost sorted in ascending order.  Find the index where sorting
