@@ -9,8 +9,7 @@ let number = 9
 
 function comparing (arr, num){
     let result = arr.filter(arrayItem => arrayItem  > num );
-    let i = 0;
-    if( result.indexOf(result[i]) === -1 ){
+    if(result.length === 0){
         return 'Such values do not exist.'
     }
     return result
